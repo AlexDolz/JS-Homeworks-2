@@ -58,6 +58,9 @@ input {
   font-size: 14px;
   margin-left: 415px;
 }
+.password_btn {
+  margin-top: 5px;
+}
 #add_btn:hover,
 #sum_btn:hover,
 .password_btn:hover {
