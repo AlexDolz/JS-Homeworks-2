@@ -8,24 +8,15 @@ const div1 = document.createElement('div');
 const task1P = document.createElement('p');
 
 button.innerText = 'Show-hide button';
-button.style.margin = '5px 5px 10px 5px';
-button.style.cursor = 'pointer';
+button.classList.add('task1_button');
+
 par.innerText = 'Show-hide paragraph';
-par.style.margin = '5px 0 10px 5px';
-body.style.backgroundColor = 'lightblue';
+par.classList.add('task1_par');
 
 task1P.innerText = 'Task 1';
-task1P.style.fontWeight = 'bold';
-task1P.style.fontSize = '20px';
-div1.style.display = 'inline-block';
-div1.style.border = '1px solid black';
-div1.style.margin = '5px 0 0 5px';
-div1.style.borderRadius = '5px';
-div1.style.padding = '3px';
+task1P.classList.add('task1_p');
 
-button.style.fontSize = '20px';
-button.style.padding = '5px';
-button.style.borderRadius = '5px';
+div1.classList.add('task1_div');
 
 button.addEventListener('click', () => {
   if (par.style.display === 'none') {
@@ -51,32 +42,24 @@ let colorArr = [
 
 let ul = document.createElement('ul');
 
-ul.style.margin = '25px 0 5px 25px';
-ul.style.listStyle = ' none';
-ul.style.display = 'flex';
+ul.classList.add('task2_ul');
+
 const div2 = document.createElement('div');
-div2.style.display = 'flex';
+
+div2.classList.add('task2_div');
+
 const ulDiv = document.createElement('div');
 const task2P = document.createElement('p');
+
 task2P.innerText = 'Task 2';
-task2P.style.fontWeight = 'bold';
-task2P.style.fontSize = '20px';
-task2P.style.margin = '45px 0 0 155px';
+task2P.classList.add('task2_p');
 
 for (let i = 0; i < colorArr.length; i++) {
   let li = document.createElement('li');
   li.innerText = colorArr[i];
   ul.append(li);
-  li.style.padding = '25px 0 0 0';
-  li.style.cursor = 'pointer';
-  li.style.width = '95px';
-  li.style.height = '80px';
-  li.style.fontSize = '20px';
-  li.style.border = '1px solid black';
-  li.style.borderRadius = '5px';
-  li.style.textAlign = 'center';
+  li.classList.add('task2_li');
   li.style.backgroundColor = colorArr[i];
-  li.style.marginLeft = '10px';
 
   li.addEventListener('mouseover', () => {
     const text = li.textContent;
@@ -117,10 +100,9 @@ const movies = [
 
 const div3 = document.createElement('div');
 const task3P = document.createElement('p');
+
+task3P.classList.add('task3_p');
 task3P.innerText = 'Task 3';
-task3P.style.fontWeight = 'bold';
-task3P.style.fontSize = '20px';
-task3P.style.margin = '0 0 0 780px';
 div3.append(task3P);
 movies.forEach(({ name, image, year, description }) => {
   const movieTitle = document.createElement('h2');
@@ -134,20 +116,13 @@ movies.forEach(({ name, image, year, description }) => {
   movieDescription.classList.add('show');
   movieDescription.classList.add('hide');
 
-  movieImg.style.float = 'left';
-
-  movieImg.style.marginRight = '15px';
-  movieImg.style.marginLeft = '15px';
-  movieTitle.style.marginLeft = '15px';
-  movieImg.style.borderRadius = '10px';
-  movieImg.style.cursor = 'pointer';
-  movieTitle.style.cursor = 'pointer';
+  movieImg.classList.add('task3_movieImg');
+  movieTitle.classList.add('task3_movieTitle');
 
   movieDescription.classList.add('movie_description');
 
   movieImg.setAttribute('src', image);
   movieImg.setAttribute('alt', 'movie');
-  movieImg.style.width = '60px';
 
   movieTitle.addEventListener('mouseover', () => {
     movieDescription.classList.toggle('hide');
@@ -191,8 +166,6 @@ for (let item of keyboard) {
 }
 
 task4P.innerText = 'Task 4-5';
-task4P.style.fontWeight = 'bold';
-task4P.style.fontSize = '20px';
-task4P.style.margin = '0 0 0 780px';
+task4P.classList.add('task4_p');
 
 body.append(div2, div3, task4P, div4, letterP);

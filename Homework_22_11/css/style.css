@@ -6,6 +6,76 @@
 }
 body {
   position: relative;
+  background-color: lightblue;
+}
+
+.task1_button {
+  margin: 5px 5px 10px 5px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.task1_par {
+  margin: 5px 0 10px 5px;
+}
+.task1_p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.task1_div {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 5px 0 0 5px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.task2_ul {
+  margin: 25px 0 5px 25px;
+  list-style: none;
+  display: flex;
+}
+
+.task2_div {
+  display: flex;
+}
+.task2_p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 45px 0 0 155px;
+}
+
+.task2_li {
+  padding: 25px 0 0 0;
+  cursor: pointer;
+  width: 95px;
+  height: 80px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.task3_p,
+.task4_p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 0 780px;
+}
+
+.task3_movieImg {
+  float: left;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 60px;
+}
+.task3_movieTitle {
+  margin-left: 15px;
+  cursor: pointer;
 }
 
 .show {
