@@ -7,7 +7,6 @@
 .container {
   max-width: 1200px;
   margin: 30px auto;
-  /* background-color: #f1f1f1; */
   padding: 30px;
   border-radius: 10px;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
