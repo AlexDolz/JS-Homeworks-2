@@ -26,13 +26,9 @@ const voters = [
   { name: 'Zack', age: 19, voted: false },
 ];
 
-let votedUsers = voters.reduce((acc, elem) => {
-  if (elem.voted == true) {
-    acc.push(elem.voted);
-  }
-  return acc;
-}, []);
-console.log(votedUsers.length);
+let votedUsers = voters.reduce((acc, elem) => (elem.voted ? ++acc : acc), 0);
+
+console.log(votedUsers);
 
 // ******************************TASK 3*****************************
 
@@ -46,14 +42,9 @@ const wishlist = [
   { title: 'A second Tesla Model S', price: 90000 },
 ];
 
-let sumPrice = 0;
-let priceArray = wishlist.reduce((acc, elem) => {
-  acc.push(elem.price);
-  acc.forEach(elem => (sumPrice += elem));
-  return acc;
-}, []);
+let totalPrice = wishlist.reduce((acc, elem) => acc + elem.price, 0);
 
-console.log(sumPrice);
+console.log(totalPrice);
 
 // *****************************TASK 4******************************
 
